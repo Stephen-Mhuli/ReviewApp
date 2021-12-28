@@ -1,17 +1,17 @@
 import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import { globalStyles } from '../styles/global';
 
-export default function ReviewDetails(){
+export default function ReviewDetails({ navigation }){
+
+    // const pressHandler = () => {
+    //     navigation.pop();
+    // }
 
     return(
-        <View style={styles.container}>
-            <Text>ReviewDetails Page</Text>
+        <View style={globalStyles.container}>
+            <Text style={globalStyles.home}>Review Details Page</Text>
+            {/* <Button title='Go back Home' onPress={pressHandler}/> */}
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        padding: 24,
-    }
-});
