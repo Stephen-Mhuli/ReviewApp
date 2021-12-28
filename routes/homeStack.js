@@ -5,10 +5,20 @@ import ReviewDetails from "../pages/ReviewDetails"
 
 const screens = {
     Home: {
-        screen: Home
+        screen: Home,
+        navigationOptions: {
+            headerTintColor: '#444',
+            title: 'Home',
+            headerStyle: { backgroundColor: 'lightgrey', height: 90 }
+        }
     },
     Reviews: {
-        screen: ReviewDetails
+        screen: ReviewDetails,
+        navigationOptions: {
+            headerTintColor: '#444',
+            title: 'Review Details',
+            headerStyle: { backgroundColor: 'lightgrey', height: 90 }
+        }
     }
 }
 
