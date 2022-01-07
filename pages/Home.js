@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { globalStyles } from '../styles/global';
+import Card from '../routes/shared/Card';
 
 export default function Home({ navigation }){
-
-    // const pressHandle = ()=>{
-    //     navigation.navigate('Reviews');
-    // }
 
     const [reviews, setReviews] = useState([
         { title: 'James Gordon, GCPD Hero cop ever', rating: 5, body: 'He brings justice for innocent people', key: '1' },
@@ -20,7 +17,9 @@ export default function Home({ navigation }){
                 data={reviews}
                 renderItem={({ item }) => (
                     <TouchableOpacity onPress={()=> navigation.navigate('Reviews', item)}>
-                        <Text style={globalStyles.titleText}> { item.title } </Text>
+                       <Card>
+                       <Text style={globalStyles.titleText}> { item.title } </Text>
+                       </Card>
                     </TouchableOpacity>
                 )}
                 />

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Navigator from './routes/Drawer';
+import Navigator from './routes/homeStack';
 
 
 export default function App() {
